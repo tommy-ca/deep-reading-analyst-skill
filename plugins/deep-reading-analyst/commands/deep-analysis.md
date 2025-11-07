@@ -712,11 +712,11 @@ Consider `/analyze` with Standard level if:
 ## Framework Reference
 
 All 8 frameworks are documented in detail:
-- `.claude/skills/deep-reading-analyst/references/scqa_framework.md`
-- `.claude/skills/deep-reading-analyst/references/5w2h_analysis.md`
-- `.claude/skills/deep-reading-analyst/references/critical_thinking.md`
-- `.claude/skills/deep-reading-analyst/references/inversion_thinking.md`
-- `.claude/skills/deep-reading-analyst/references/mental_models.md`
-- `.claude/skills/deep-reading-analyst/references/first_principles.md`
-- `.claude/skills/deep-reading-analyst/references/systems_thinking.md`
-- `.claude/skills/deep-reading-analyst/references/six_hats.md`
+- `skills/deep-reading-analyst/references/scqa_framework.md`
+- `skills/deep-reading-analyst/references/5w2h_analysis.md`
+- `skills/deep-reading-analyst/references/critical_thinking.md`
+- `skills/deep-reading-analyst/references/inversion_thinking.md`
+- `skills/deep-reading-analyst/references/mental_models.md`
+- `skills/deep-reading-analyst/references/first_principles.md`
+- `skills/deep-reading-analyst/references/systems_thinking.md`
+- `skills/deep-reading-analyst/references/six_hats.md`
