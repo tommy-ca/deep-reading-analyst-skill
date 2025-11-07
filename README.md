@@ -1,7 +1,7 @@
 # Deep Reading Analyst - Claude AI Skill
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/yourusername/deep-reading-analyst)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/yourusername/deep-reading-analyst)
 
 A professional Claude AI skill that transforms surface-level reading into deep learning through systematic analysis using proven thinking frameworks.
 
@@ -51,12 +51,86 @@ Choose the right level for your needs:
 
 ## 🚀 Installation
 
-### Prerequisites
+Choose the installation method that works best for you:
 
+### Method 1: Install from Every Marketplace (Recommended)
+
+This method provides the full marketplace plugin experience with automatic updates.
+
+**Prerequisites:**
+- Claude Code (desktop or CLI) v2.1.0+
+
+**Steps:**
+
+1. **Add marketplace repository:**
+   ```bash
+   /plugin marketplace add https://github.com/tommyk/deep-reading-analyst-marketplace
+   ```
+
+2. **Install the plugin:**
+   ```bash
+   /plugin install deep-reading-analyst
+   ```
+
+   **Alternative with npx:**
+   ```bash
+   npx claude-plugins install @tommyk/deep-reading-analyst-marketplace/deep-reading-analyst
+   ```
+
+3. **Verify installation:**
+   - The skill will auto-trigger when you analyze content
+   - Try slash commands: `/analyze`, `/quick-analysis`, `/deep-analysis`, `/apply-framework`
+   - Use the framework-coordinator agent for advanced orchestration
+
+**What you get with the marketplace plugin:**
+- ✅ Full skill functionality (10+ thinking frameworks)
+- ✅ 4 slash commands for quick access
+- ✅ Framework coordinator agent for intelligent orchestration
+- ✅ Automatic marketplace updates
+- ✅ Professional plugin management
+
+### Method 2: Install as Local Plugin
+
+This method provides the full experience with slash commands and agent coordination.
+
+**Prerequisites:**
+- Claude Code (desktop or CLI)
+- Git (for cloning the repository)
+
+**Steps:**
+
+1. **Clone or download this repository:**
+   ```bash
+   git clone https://github.com/yourusername/deep-reading-analyst-skill.git
+   cd deep-reading-analyst-skill
+   ```
+
+2. **Plugin auto-discovery:**
+   - Claude Code automatically discovers the plugin from the `.claude-plugin/` directory
+   - The skill is bundled in `plugins/deep-reading-analyst/skills/deep-reading-analyst/`
+   - Slash commands are available in `plugins/deep-reading-analyst/commands/`
+   - Framework coordinator agent in `plugins/deep-reading-analyst/agents/`
+
+3. **Verify installation:**
+   - The skill will auto-trigger when you analyze content
+   - Try slash commands: `/analyze`, `/quick-analysis`, `/deep-analysis`, `/apply-framework`
+   - Use the framework-coordinator agent for advanced orchestration
+
+**What you get with the plugin:**
+- ✅ Full skill functionality (10+ thinking frameworks)
+- ✅ 4 slash commands for quick access
+- ✅ Framework coordinator agent for intelligent orchestration
+- ✅ Automatic updates when you pull from Git
+
+### Method 2: Install .skill File (Legacy, v2.0.0 compatible)
+
+This method works with Claude Desktop App and Claude Web, but doesn't include slash commands or agents.
+
+**Prerequisites:**
 - Claude Desktop App or Claude Web (claude.ai)
 - Claude Pro subscription (recommended for best experience)
 
-### Steps
+**Steps:**
 
 1. **Download** the skill file: [deep-reading-analyst.skill](deep-reading-analyst.skill)
 
@@ -77,6 +151,31 @@ Choose the right level for your needs:
    - Upload the `.skill` file
 
 3. **Start using!** The skill will automatically trigger when you ask Claude to analyze articles.
+
+**What you get with .skill file:**
+- ✅ Full skill functionality (10+ thinking frameworks)
+- ❌ No slash commands
+- ❌ No framework coordinator agent
+
+### Updating
+
+**Plugin users:**
+```bash
+cd deep-reading-analyst-skill
+git pull origin main
+```
+
+**.skill file users:**
+Download the latest `.skill` file and re-import it.
+
+### Available Commands (Plugin Only)
+
+Once installed as a plugin, you have access to these slash commands:
+
+- `/analyze [content]` - Interactive analysis with depth selection
+- `/quick-analysis [content]` - Fast 15-minute analysis (SCQA + 5W2H)
+- `/deep-analysis [content]` - Comprehensive 60-minute analysis (all frameworks)
+- `/apply-framework [name] [content]` - Apply specific thinking framework
 
 ## 💡 Usage Guide
 
@@ -284,31 +383,38 @@ A: Added 4 major frameworks: SCQA (McKinsey), 5W2H Analysis, Mental Models (30+ 
 
 ## 🛠️ Technical Details
 
-**Repository Structure:**
+**Repository Structure (Marketplace Format):**
 ```
 deep-reading-analyst-skill/
-├── src/                               # Source files (edit these)
-│   └── deep-reading-analyst/
-│       ├── SKILL.md                   # Core workflow and instructions
-│       └── references/                # Thinking framework references
-│           ├── scqa_framework.md      # Structure thinking (v2.0)
-│           ├── 5w2h_analysis.md       # Completeness check (v2.0)
-│           ├── critical_thinking.md   # Argument analysis
-│           ├── inversion_thinking.md  # Risk analysis (v2.0)
-│           ├── mental_models.md       # Multi-discipline models (v2.0)
-│           ├── first_principles.md    # Essence extraction
-│           ├── systems_thinking.md    # Relationship mapping
-│           ├── six_hats.md           # Multi-perspective protocol
-│           ├── output_templates.md    # Note formats
-│           └── comparison_matrix.md   # Cross-article analysis
-├── build.sh                           # Build script to package skill
-└── deep-reading-analyst.skill         # Built skill file (ready to import)
+├── plugins/deep-reading-analyst/      # Marketplace plugin structure
+│   ├── .claude-plugin/
+│   │   └── plugin.json               # Plugin manifest
+│   ├── skills/deep-reading-analyst/   # Skills bundle
+│   │   ├── SKILL.md                  # Core workflow and instructions
+│   │   └── references/               # Thinking framework references
+│   │       ├── scqa_framework.md     # Structure thinking (v2.0)
+│   │       ├── 5w2h_analysis.md      # Completeness check (v2.0)
+│   │       ├── critical_thinking.md  # Argument analysis
+│   │       ├── inversion_thinking.md # Risk analysis (v2.0)
+│   │       ├── mental_models.md      # Multi-discipline models (v2.0)
+│   │       ├── first_principles.md   # Essence extraction
+│   │       ├── systems_thinking.md   # Relationship mapping
+│   │       ├── six_hats.md          # Multi-perspective protocol
+│   │       ├── output_templates.md   # Note formats
+│   │       └── comparison_matrix.md  # Cross-article analysis
+│   ├── commands/                     # Slash commands
+│   ├── agents/                       # Framework coordinator agent
+│   └── LICENSE                       # Plugin license
+├── .claude-plugin/
+│   └── marketplace.json              # Marketplace registry
+├── build.sh                          # Build script for marketplace
+└── deep-reading-analyst.skill        # Legacy skill file (v2.0 compatible)
 ```
 
 **For Contributors:**
-- Edit files in `src/deep-reading-analyst/`
-- Run `./build.sh` to rebuild the skill package
-- Test by importing the `.skill` file into Claude
+- Edit files in `plugins/deep-reading-analyst/skills/deep-reading-analyst/`
+- Run `./build.sh` to validate and build the marketplace plugin
+- Test by installing via marketplace or local plugin discovery
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for details
 
 **Package Size:** ~40KB (optimized for context window efficiency)
