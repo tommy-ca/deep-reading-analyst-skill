@@ -1,0 +1,35 @@
+{
+  "name": "deep-reading-analyst-marketplace",
+  "owner": {
+    "name": "Tommy K",
+    "url": "https://github.com/tommyk"
+  },
+  "metadata": {
+    "description": "Deep Reading Analyst marketplace for Claude Code extensions. Systematic framework for deep analysis of articles, papers, and long-form content using 10+ thinking models.",
+    "version": "2.1.0"
+  },
+  "plugins": [
+    {
+      "name": "deep-reading-analyst",
+      "description": "Systematic framework for deep analysis of articles, papers, and long-form content using 10+ thinking models (SCQA, 5W2H, Critical Thinking, Inversion, Mental Models, First Principles, Systems Thinking, Six Thinking Hats). Transforms surface reading into deep learning through structured workflows.",
+      "version": "2.1.0",
+      "author": {
+        "name": "Tommy K",
+        "url": "https://github.com/tommyk"
+      },
+      "homepage": "https://github.com/tommyk/deep-reading-analyst-skill",
+      "tags": [
+        "analysis",
+        "reading",
+        "learning",
+        "thinking-frameworks",
+        "critical-thinking",
+        "mental-models",
+        "systems-thinking",
+        "productivity",
+        "education"
+      ],
+      "source": "./plugins/deep-reading-analyst"
+    }
+  ]
+}
