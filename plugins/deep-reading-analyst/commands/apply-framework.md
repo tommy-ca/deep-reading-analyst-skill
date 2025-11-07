@@ -1707,7 +1707,7 @@ The article gives one-size-fits-all advice. Six Hats reveals you need custom sol
 - **Synthesis**: Integrated understanding
 - **Gaps**: What none of the sources cover
 
-**Example**: See comparison_matrix.md reference document
+**Example**: See `skills/deep-reading-analyst/references/comparison_matrix.md` reference document
 
 ---
 
@@ -1749,7 +1749,7 @@ Some frameworks work especially well together:
 
 1. **Know what question you're answering**: Each framework targets different questions
 2. **Go deep vs broad**: Single framework allows deeper exploration
-3. **Reference the framework docs**: Each has detailed methodology in `/references/`
+3. **Reference the framework docs**: Each has detailed methodology in `skills/deep-reading-analyst/references/`
 4. **Combine later if needed**: Can always apply additional frameworks after
 5. **Use for team collaboration**: Assign different frameworks to team members
 
