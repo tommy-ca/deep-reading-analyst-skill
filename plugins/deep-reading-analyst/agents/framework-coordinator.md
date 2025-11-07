@@ -1021,7 +1021,7 @@ Use metrics to tune:
 
 ## Related Resources
 
-- **Framework reference docs**: `.claude/skills/deep-reading-analyst/references/`
+- **Framework reference docs**: `skills/deep-reading-analyst/references/`
 - **Command integrations**: This agent is automatically used by `/analyze`, `/deep-analysis` when multiple frameworks selected
 - **Manual invocation**: Can be called directly for custom framework orchestration
 
