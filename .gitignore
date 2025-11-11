@@ -48,6 +48,10 @@ yarn-error.log
 *.tar.gz
 *.rar
 
+# Claude Plugin Build Artifacts
+*.skill
+*.claude-plugin.zip
+
 # Personal Notes (optional)
 NOTES.md
 TODO.md
